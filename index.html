@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,8 +53,8 @@
         }
 
         @keyframes meshMove {
-            0%, 100% { transform: scale(1) rotate(0deg); }
-            50% { transform: scale(1.1) rotate(5deg); }
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
         }
 
         .geometric-shapes {
@@ -211,14 +209,14 @@
             0%, 100% { 
                 transform: scale(1);
                 box-shadow: 
-                    0 0 30px rgba(0, 255, 255, 0.3),
-                    0 0 60px rgba(255, 0, 128, 0.2);
+                    0 0 20px rgba(0, 255, 255, 0.2),
+                    0 0 40px rgba(255, 0, 128, 0.1);
             }
             50% { 
-                transform: scale(1.05);
+                transform: scale(1.02);
                 box-shadow: 
-                    0 0 40px rgba(0, 255, 255, 0.5),
-                    0 0 80px rgba(255, 0, 128, 0.3);
+                    0 0 25px rgba(0, 255, 255, 0.3),
+                    0 0 50px rgba(255, 0, 128, 0.15);
             }
         }
 
@@ -227,9 +225,8 @@
             position: absolute;
             inset: -3px;
             border-radius: 50%;
-            background: conic-gradient(var(--neon-cyan), var(--neon-pink), var(--neon-purple), var(--neon-cyan));
+            background: linear-gradient(45deg, var(--neon-cyan), var(--neon-pink));
             z-index: -1;
-            animation: borderRotate 4s linear infinite;
         }
 
         @keyframes borderRotate {
@@ -368,13 +365,9 @@
             margin-right: 15px;
             font-size: 1.3em;
             text-shadow: 0 0 10px var(--neon-cyan);
-            animation: checkmarkGlow 2s ease-in-out infinite alternate;
         }
 
-        @keyframes checkmarkGlow {
-            from { text-shadow: 0 0 10px var(--neon-cyan); }
-            to { text-shadow: 0 0 20px var(--neon-cyan), 0 0 30px var(--neon-cyan); }
-        }
+
 
         /* Premium Amazon Card */
         .amazon-card {
@@ -406,8 +399,8 @@
         }
 
         @keyframes pulse {
-            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.5; }
-            50% { transform: scale(1.1) rotate(180deg); opacity: 0.8; }
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.02); opacity: 0.5; }
         }
 
         .amazon-title {
@@ -618,15 +611,11 @@
             position: absolute;
             inset: -2px;
             border-radius: 50%;
-            background: conic-gradient(var(--neon-cyan), var(--neon-pink), var(--neon-purple), var(--neon-cyan));
+            background: linear-gradient(45deg, var(--neon-cyan), var(--neon-pink));
             z-index: -1;
-            animation: socialBorder 3s linear infinite;
         }
 
-        @keyframes socialBorder {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
+
 
         .social-icon:hover {
             transform: translateY(-10px) scale(1.15) rotateY(15deg);
@@ -731,10 +720,10 @@
             </button>
         </div>
 
-<!--        <div class="social-links">
+        <div class="social-links">
             <a href="#" class="social-icon">📺</a>
             <a href="#" class="social-icon">📷</a>
-        </div>-->
+        </div>
     </div>
 
     <script>
